@@ -3,7 +3,11 @@
 $loader = require 'vendor/autoload.php';
 $loader->add('AppName', __DIR__.'/../src/');
 
-$client = new \Gitlab\Client('https://gitlab.com/api/v3/');
+if ( isset($server) )
+  $client = new \Gitlab\Client($server);
+else
+  $client = new \Gitlab\Client('https://gitlab.com/api/v3/');
+
 if ( isset($token) )
   $client->authenticate($token, \Gitlab\Client::AUTH_URL_TOKEN);
 
@@ -27,12 +31,12 @@ foreach ($relative_path as $key => $value) {
 echo '<link rel="stylesheet" type="text/css" href="'.$prims_css_default.'" />';
 echo '<script src="'.$prims_js_default.'"></script>';
 
-if ( isset($repo_id) && isset($path) ){
-  $git_repo = $repo_id;
-  $git_path = $path;
+if ( isset($repo) && isset($pathfile) ){
+  $git_repo = $repo;
+  $git_path = $pathfile;
 } else {
-  $git_repo = "2135786";
-  $git_path = "README.md";
+  $git_repo = "2223853";
+  $git_path = "Readme.md";
 }
 
 $api = "repo";
