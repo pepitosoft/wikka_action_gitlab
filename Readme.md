@@ -31,13 +31,13 @@ For example:
 or
 
 ```markup
-{{gitlab repo_id="2135786" path="README.md"}}
+{{gitlab repo="2135786" pathfile="README.md"}}
 ```
 
 more opitons
 
 ```markup
-{{gitlab repo_id="2135786" path="README.md" server="https://tuserver.yupi/api/v3/" token="yourtokensharedbadidea"}}
+{{gitlab repo="2135786" pathfile="README.md" server="https://tuserver.yupi/api/v3/" token="yourtokensharedbadidea"}}
 ```
 Note: Be careful dont share your token on a shared wiki. If the repository is public maybe dont need to log.
 
