@@ -1,0 +1,6 @@
+{
+    "require": {
+        "m4tthumphrey/php-gitlab-api": "^7.15",
+        "cebe/markdown": "^1.1"
+    }
+}
